@@ -1,0 +1,20 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user-eureka:euakjdaskrejdnbfjka@${EUREKA_SERVER}:8761/eureka
+  instance:
+    instance-id: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+mq:
+  queues:
+    criacao-prova: criacao-prova
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+logging:
+  file:
+    name: Exam-Service/logs/log-file.log
