@@ -969,3 +969,13 @@ Caused by: java.net.NoRouteToHostException: Não há rota para o host
 2023-07-11T17:27:56.053-03:00  INFO 24780 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2023-07-11T17:32:56.054-03:00  INFO 24780 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2023-07-11T17:37:56.055-03:00  INFO 24780 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-11T17:42:56.057-03:00  INFO 24780 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-11T17:43:22.221-03:00  INFO 24780 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SUPPORT-EQUIPMENT with eureka with status DOWN
+2023-07-11T17:43:22.222-03:00  INFO 24780 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1689108202222, current=DOWN, previous=UP]
+2023-07-11T17:43:22.222-03:00  INFO 24780 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SUPPORT-EQUIPMENT/192.168.43.202:support-equipment:03e0e8a839afa493b35aa9d61b0703ec: registering service...
+2023-07-11T17:43:22.269-03:00  INFO 24780 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11T17:43:22.274-03:00  INFO 24780 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2023-07-11T17:43:22.334-03:00  INFO 24780 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SUPPORT-EQUIPMENT/192.168.43.202:support-equipment:03e0e8a839afa493b35aa9d61b0703ec - registration status: 204
+2023-07-11T17:43:22.336-03:00  INFO 24780 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2023-07-11T17:43:22.464-03:00  INFO 24780 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SUPPORT-EQUIPMENT/192.168.43.202:support-equipment:03e0e8a839afa493b35aa9d61b0703ec - deregister  status: 200
+2023-07-11T17:43:22.473-03:00  INFO 24780 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
