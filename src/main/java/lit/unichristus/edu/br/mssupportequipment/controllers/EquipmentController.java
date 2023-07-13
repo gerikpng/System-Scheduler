@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class EquipmentController {
 
 
-    public ResponseEntity<SupportequipmentModel> getEquipments(){
-        return ResponseEntity;
-    }
+//    public ResponseEntity<SupportequipmentModel> getEquipments(){
+//        return ResponseEntity;
+//    }
 }
