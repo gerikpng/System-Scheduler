@@ -1,97 +1,43 @@
-package lit.unichristus.edu.br.mssupportequipment.models;
+package lit.unichristus.edu.br.mssupportequipment.dto;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lit.unichristus.edu.br.mssupportequipment.enums.SituationEnum;
+import lit.unichristus.edu.br.mssupportequipment.models.CampusModel;
+import lit.unichristus.edu.br.mssupportequipment.models.RoomModel;
+import lit.unichristus.edu.br.mssupportequipment.models.SupportequipmentModel;
 
-import java.io.Serial;
-import java.io.Serializable;
 import java.util.Date;
 import java.util.UUID;
 
-@Entity
-@Table(name = "support_equipment")
-public class SupportequipmentModel implements Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID id;
+public class SupportEquipmentsDto {
 
-    private Date createdDate;
-
-    private boolean isDeleted;
-    @Serial
-    private static final long serialVersionUID = 1L;
-//    --------------------------
-
-    @Column(nullable = false, length = 30)
+    @NotBlank(message="Name may not be blank")
+    @Size(max = 30)
     private String description;
-    @Column(nullable = false, length = 30)
+    @NotBlank
     private String brand;
-
-    @Column(nullable = false, length = 30)
+    @NotBlank
     private String productModel;
-
-    @Column(nullable = false, length = 30)
+    @NotBlank
     private String serialNumber;
-
-    @Column(nullable = false, length = 30)
+    @NotBlank
     private String patrimony;
-
-    @Column(nullable = false, length = 30)
+    @NotNull
     private SituationEnum situation;
-
-    @Column(nullable = true, length = 30)
+    @NotNull
     private Integer amount;
-
-    @Column(nullable = false, length = 30)
+    @NotNull
     private Date lastChange;
-
-    @OneToOne(cascade = CascadeType.MERGE, optional = false)
-    @JoinColumn(name = "room_id")
+    @NotNull
     private RoomModel room;
-
-    @ManyToOne(cascade = CascadeType.MERGE, optional = false)
-    @JoinColumn(name = "campus_id")
+    @NotNull
     private CampusModel campus;
 
-
-    public SupportequipmentModel() {
-    }
-
-    public SupportequipmentModel(String description, String brand, String productModel, String serialNumber, String patrimony, SituationEnum situation, Integer amount, Date lastChange, RoomModel room, CampusModel campus) {
-        this.description = description;
-        this.brand = brand;
-        this.productModel = productModel;
-        this.serialNumber = serialNumber;
-        this.patrimony = patrimony;
-        this.situation = situation;
-        this.amount = amount;
-        this.lastChange = lastChange;
-        this.room = room;
-        this.campus = campus;
-    }
-
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
-    }
-
-    public Date getCreatedDate() {
-        return createdDate;
-    }
-
-    public void setCreatedDate(Date createdDate) {
-        this.createdDate = createdDate;
-    }
-
-    public boolean isDeleted() {
-        return isDeleted;
-    }
-
-    public void setDeleted(boolean deleted) {
-        isDeleted = deleted;
+    public SupportequipmentModel toModel(){
+        return new SupportequipmentModel(description,brand,productModel,serialNumber,patrimony,situation,amount,lastChange,room,campus);
     }
 
     public String getDescription() {
