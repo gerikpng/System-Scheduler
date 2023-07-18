@@ -1,44 +1,35 @@
 package lit.unichristus.edu.br.mssupportequipment.dto;
 
-import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lit.unichristus.edu.br.mssupportequipment.enums.SituationEnum;
-import lit.unichristus.edu.br.mssupportequipment.models.CampusModel;
-import lit.unichristus.edu.br.mssupportequipment.models.RoomModel;
-import lit.unichristus.edu.br.mssupportequipment.models.SupportequipmentModel;
+import lit.unichristus.edu.br.mssupportequipment.models.SupportEquipmentModel;
 
 import java.util.Date;
 import java.util.UUID;
 
 public class SupportEquipmentsDto {
 
-    @NotBlank(message="Name may not be blank")
     @Size(max = 30)
     private String description;
-    @NotBlank
     private String brand;
-    @NotBlank
     private String productModel;
-    @NotBlank
     private String serialNumber;
-    @NotBlank
     private String patrimony;
-    @NotNull
     private SituationEnum situation;
-    @NotNull
     private Integer amount;
-    @NotNull
     private Date lastChange;
-    @NotNull
-    private RoomModel room;
-    @NotNull
-    private CampusModel campus;
+    private Date bookedUntil;
+    private UUID campus;
+    private boolean isDeleted;
 
-    public SupportequipmentModel toModel(){
-        return new SupportequipmentModel(description,brand,productModel,serialNumber,patrimony,situation,amount,lastChange,room,campus);
+    private String room;
+
+    public SupportEquipmentModel toModel(){
+        return new SupportEquipmentModel(description,brand,productModel,serialNumber,patrimony,situation,amount,lastChange,bookedUntil,campus,isDeleted,room);
     }
+
 
     public String getDescription() {
         return description;
@@ -104,19 +95,35 @@ public class SupportEquipmentsDto {
         this.lastChange = lastChange;
     }
 
-    public RoomModel getRoom() {
-        return room;
-    }
-
-    public void setRoom(RoomModel room) {
-        this.room = room;
-    }
-
-    public CampusModel getCampus() {
+    public UUID getCampus() {
         return campus;
     }
 
-    public void setCampus(CampusModel campus) {
+    public void setCampus(UUID campus) {
         this.campus = campus;
+    }
+
+    public String getRoom() {
+        return room;
+    }
+
+    public void setRoom(String room) {
+        this.room = room;
+    }
+
+    public boolean isDeleted() {
+        return isDeleted;
+    }
+
+    public void setDeleted(boolean deleted) {
+        isDeleted = deleted;
+    }
+
+    public Date getBookedUntil() {
+        return bookedUntil;
+    }
+
+    public void setBookedUntil(Date bookedUntil) {
+        this.bookedUntil = bookedUntil;
     }
 }

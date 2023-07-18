@@ -1,7 +1,9 @@
 package lit.unichristus.edu.br.mssupportequipment.models;
 
 import jakarta.persistence.*;
+import jakarta.transaction.Transactional;
 import lit.unichristus.edu.br.mssupportequipment.enums.SituationEnum;
+import lombok.NoArgsConstructor;
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -10,54 +12,48 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "support_equipment")
-public class SupportequipmentModel implements Serializable {
+@NoArgsConstructor
+@Transactional
+public class SupportEquipmentModel implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
+    @Serial
+    private static final long serialVersionUID = 1L;
+
     private Date createdDate;
 
     private boolean isDeleted;
-    @Serial
-    private static final long serialVersionUID = 1L;
 //    --------------------------
 
     @Column(nullable = false, length = 30)
     private String description;
-    @Column(nullable = false, length = 30)
+    @Column(nullable = true, length = 30)
     private String brand;
 
-    @Column(nullable = false, length = 30)
+    @Column(nullable = true, length = 30)
     private String productModel;
 
-    @Column(nullable = false, length = 30)
+    @Column(nullable = true, length = 30)
     private String serialNumber;
 
-    @Column(nullable = false, length = 30)
+    @Column(nullable = true, length = 30)
     private String patrimony;
 
-    @Column(nullable = false, length = 30)
+    @Enumerated(EnumType.STRING)
     private SituationEnum situation;
 
-    @Column(nullable = true, length = 30)
     private Integer amount;
 
-    @Column(nullable = false, length = 30)
     private Date lastChange;
+    private Date bookedUntil;
+    private UUID campus;
 
-    @OneToOne(cascade = CascadeType.MERGE, optional = false)
-    @JoinColumn(name = "room_id")
-    private RoomModel room;
-
-    @ManyToOne(cascade = CascadeType.MERGE, optional = false)
-    @JoinColumn(name = "campus_id")
-    private CampusModel campus;
+    private String room;
 
 
-    public SupportequipmentModel() {
-    }
-
-    public SupportequipmentModel(String description, String brand, String productModel, String serialNumber, String patrimony, SituationEnum situation, Integer amount, Date lastChange, RoomModel room, CampusModel campus) {
+    public SupportEquipmentModel(String description, String brand, String productModel, String serialNumber, String patrimony, SituationEnum situation, Integer amount, Date lastChange,Date bookedUntil, UUID campus,boolean isDeleted,String room) {
         this.description = description;
         this.brand = brand;
         this.productModel = productModel;
@@ -66,9 +62,14 @@ public class SupportequipmentModel implements Serializable {
         this.situation = situation;
         this.amount = amount;
         this.lastChange = lastChange;
-        this.room = room;
         this.campus = campus;
+        this.isDeleted = isDeleted;
+        this.room = room;
+        this.bookedUntil = bookedUntil;
     }
+
+
+
 
     public UUID getId() {
         return id;
@@ -158,19 +159,28 @@ public class SupportequipmentModel implements Serializable {
         this.lastChange = lastChange;
     }
 
-    public RoomModel getRoom() {
-        return room;
-    }
-
-    public void setRoom(RoomModel room) {
-        this.room = room;
-    }
-
-    public CampusModel getCampus() {
+    public UUID getCampus() {
         return campus;
     }
 
-    public void setCampus(CampusModel campus) {
+    public void setCampus(UUID campus) {
         this.campus = campus;
     }
+
+    public Date getBookedUntil() {
+        return bookedUntil;
+    }
+
+    public void setBookedUntil(Date bookedUntil) {
+        this.bookedUntil = bookedUntil;
+    }
+
+    public String getRoom() {
+        return room;
+    }
+
+    public void setRoom(String room) {
+        this.room = room;
+    }
 }
+

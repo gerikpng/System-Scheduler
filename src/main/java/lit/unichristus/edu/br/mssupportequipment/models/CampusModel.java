@@ -5,29 +5,24 @@ import jakarta.persistence.*;
 import java.io.Serializable;
 import java.util.UUID;
 
-@Entity
-@Table(name = "campus")
 public class CampusModel implements Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    public UUID id;
+    private boolean isDeleted;
     @Column(nullable = false, length = 30)
     private String name;
 
     public CampusModel() {
     }
 
-    public CampusModel(UUID id, String name) {
-        this.id = id;
+    public CampusModel(String name) {
         this.name = name;
     }
 
-    public UUID getId() {
-        return id;
+    public boolean isDeleted() {
+        return isDeleted;
     }
 
-    public void setId(UUID id) {
-        this.id = id;
+    public void setDeleted(boolean deleted) {
+        isDeleted = deleted;
     }
 
     public String getName() {
