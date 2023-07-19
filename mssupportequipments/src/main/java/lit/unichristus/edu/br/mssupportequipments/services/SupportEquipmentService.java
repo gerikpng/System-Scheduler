@@ -1,11 +1,13 @@
 package lit.unichristus.edu.br.mssupportequipments.services;
 
 import jakarta.transaction.Transactional;
+import lit.unichristus.edu.br.mssupportequipments.enums.SituationEnum;
 import lit.unichristus.edu.br.mssupportequipments.models.SupportEquipmentModel;
 import lit.unichristus.edu.br.mssupportequipments.repositories.SupportEquipmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -27,7 +29,7 @@ public class SupportEquipmentService {
     }
 
     public List<SupportEquipmentModel> findByCampus(UUID id){
-        return repository.findByCampus(id);
+        return repository.findByCampusAndIsDeletedFalse(id);
     }
 
     @Transactional
@@ -35,7 +37,7 @@ public class SupportEquipmentService {
         return repository.save(supportequipmentModel);
     }
     public boolean existByDescription(String description){
-        return repository.existsByDescription(description);
+        return repository.existsByDescriptionAndIsDeletedFalse(description);
     }
     public Optional<SupportEquipmentModel> findById(UUID id){
         return repository.findById(id);
@@ -46,5 +48,15 @@ public class SupportEquipmentService {
         repository.delete(supportequipmentModel);
     }
 
+
+    public SupportEquipmentModel  getReleasableEquipament(UUID campus){
+        Date now = new Date();
+        SituationEnum relase = SituationEnum.InUse;
+        return repository.findFirstByCampusAndSituationAndBookedUntilBefore(campus,relase,now);
+    }
+
+    public Object releaseEquipment(SupportEquipmentModel model) {
+        return repository.save(model);
+    }
 
 }
