@@ -18,6 +18,7 @@ public interface SupportEquipmentRepository extends JpaRepository<SupportEquipme
 
     //from mReserve
     SupportEquipmentModel findFirstByCampusAndSituationAndBookedUntilBefore(UUID id, SituationEnum situation, Date now);
+    List<SupportEquipmentModel> findByCampusAndSituationAndBookedUntilBefore(UUID id, SituationEnum situation, Date now);
 
 //    ResponseEntity<List<SupportEquipmentModel>> findByCampus(String campus);
 }

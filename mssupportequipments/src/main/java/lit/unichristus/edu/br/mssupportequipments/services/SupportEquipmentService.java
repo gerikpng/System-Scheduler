@@ -54,9 +54,18 @@ public class SupportEquipmentService {
         SituationEnum relase = SituationEnum.InUse;
         return repository.findFirstByCampusAndSituationAndBookedUntilBefore(campus,relase,now);
     }
+    public List<SupportEquipmentModel>  getAllReleasableEquipament(UUID campus){
+        Date now = new Date();
+        SituationEnum relase = SituationEnum.InUse;
+        return repository.findByCampusAndSituationAndBookedUntilBefore(campus,relase,now);
+    }
 
     public Object releaseEquipment(SupportEquipmentModel model) {
         return repository.save(model);
+    }
+
+    public Object releaseAllEquipment(List<SupportEquipmentModel> model) {
+        return repository.saveAll(model);
     }
 
 }

@@ -88,44 +88,48 @@ public class SupportEquipmentController {
     public ResponseEntity<Object> releaseManuallyEquipment(){
         try{
             UUID idCampus = UUID.fromString("25323fa5-3781-40b6-be77-a021ec4e82b1");
-            SupportEquipmentModel equipments = equipmentService.getReleasableEquipament(idCampus);
+            List<SupportEquipmentModel> equipments = equipmentService.getAllReleasableEquipament(idCampus);
             if(equipments.equals(null)) {
                 System.out.println("NADA ENCONTRADO =---------------------------------------------------");
                 return ResponseEntity.status(HttpStatus.NOT_FOUND).body("NO ONE EQUIPMENT CAN BE RELEASED");
             }
             System.out.println("TUDO ENCONTRADO =---------------------------------------------------");
 
-            equipments.setSituation(SituationEnum.Released);
-            return ResponseEntity.status(HttpStatus.OK).body(equipmentService.releaseEquipment(equipments));
-
-        }catch (Exception e){
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e);
-        }
-    }
-
-    @PutMapping()
-    @Scheduled(fixedDelay = 12, timeUnit = TimeUnit.HOURS)
-    public ResponseEntity<Object> releaseAllEquipment(){
-        try{
-            UUID idCampus = UUID.fromString("25323fa5-3781-40b6-be77-a021ec4e82b1");
-            SupportEquipmentModel equipments = equipmentService.getReleasableEquipament(idCampus);
-
-
-
-            if(equipments.equals(null)) {
-                System.out.println("NADA ENCONTRADO =---------------------------------------------------");
-                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("NO ONE EQUIPMENT CAN BE RELEASED");
+            for(SupportEquipmentModel equipamentos: equipments){
+                equipamentos.setSituation(SituationEnum.Released);
             }
-            System.out.println("TUDO ENCONTRADO =---------------------------------------------------"+new Date());
-
-
-            equipments.setSituation(SituationEnum.Released);
-            return ResponseEntity.status(HttpStatus.OK).body(equipmentService.releaseEquipment(equipments));
+            return ResponseEntity.status(HttpStatus.OK).body(equipmentService.releaseAllEquipment(equipments));
 
         }catch (Exception e){
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e);
         }
     }
+
+
+
+//    @PutMapping()
+//    @Scheduled(fixedDelay = 12, timeUnit = TimeUnit.HOURS)
+//    public ResponseEntity<Object> releaseAllEquipment(){
+//        try{
+//            UUID idCampus = UUID.fromString("25323fa5-3781-40b6-be77-a021ec4e82b1");
+//            SupportEquipmentModel equipments = equipmentService.getReleasableEquipament(idCampus);
+//
+//
+//
+//            if(equipments.equals(null)) {
+//                System.out.println("NADA ENCONTRADO =---------------------------------------------------");
+//                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("NO ONE EQUIPMENT CAN BE RELEASED");
+//            }
+//            System.out.println("TUDO ENCONTRADO =---------------------------------------------------"+new Date());
+//
+//
+//            equipments.setSituation(SituationEnum.Released);
+//            return ResponseEntity.status(HttpStatus.OK).body(equipmentService.releaseEquipment(equipments));
+//
+//        }catch (Exception e){
+//            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e);
+//        }
+//    }
 
 
 
