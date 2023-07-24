@@ -36,6 +36,7 @@ public class SupportEquipmentService {
     public Object save(SupportEquipmentModel supportequipmentModel){
         return repository.save(supportequipmentModel);
     }
+
     public boolean existByDescription(String description){
         return repository.existsByDescriptionAndIsDeletedFalse(description);
     }
@@ -50,14 +51,12 @@ public class SupportEquipmentService {
 
 
     public SupportEquipmentModel  getReleasableEquipament(UUID campus){
-        Date now = new Date();
         SituationEnum relase = SituationEnum.InUse;
-        return repository.findFirstByCampusAndSituationAndBookedUntilBefore(campus,relase,now);
+        return repository.findFirstByCampusAndSituation(campus,relase);
     }
-    public List<SupportEquipmentModel>  getAllReleasableEquipament(UUID campus){
-        Date now = new Date();
+    public Object getAllReleasableEquipament(UUID campus){
         SituationEnum relase = SituationEnum.InUse;
-        return repository.findByCampusAndSituationAndBookedUntilBefore(campus,relase,now);
+        return repository.findByCampusAndSituation(campus,relase);
     }
 
     public Object releaseEquipment(SupportEquipmentModel model) {
@@ -68,4 +67,11 @@ public class SupportEquipmentService {
         return repository.saveAll(model);
     }
 
+    public Object findByCampusAndSituation(UUID id, SituationEnum released) {
+        return repository.findByCampusAndSituation(id,released);
+    }
+
+    public List<SupportEquipmentModel> getAllocatedEquipments(UUID idReserve) {
+        return repository.findAllByReserveRoomId(idReserve);
+    }
 }

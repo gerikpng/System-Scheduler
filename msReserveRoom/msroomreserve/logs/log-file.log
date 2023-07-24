@@ -1,0 +1,510 @@
+2023-07-24T08:07:00.719-03:00  INFO 73472 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2023-07-24T08:07:01.066-03:00  INFO 73472 --- [main] c.c.c.ConfigServicePropertySourceLocator : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/msroomreserve/default": Conexão recusada. Will be trying the next url if available
+2023-07-24T08:07:01.067-03:00  WARN 73472 --- [main] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/msroomreserve/default": Conexão recusada
+2023-07-24T08:07:01.084-03:00  INFO 73472 --- [main] l.u.e.br.demo.MsRoomReserveApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-07-24T08:07:03.160-03:00  INFO 73472 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-24T08:07:03.348-03:00  INFO 73472 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 172 ms. Found 1 JPA repository interfaces.
+2023-07-24T08:07:03.799-03:00  INFO 73472 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=5baa2d3c-cd94-30ec-99d8-d2a75fee4316
+2023-07-24T08:07:03.902-03:00  INFO 73472 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'lit.unichristus.edu.br.demo.clients.SupportEquipmentsClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-24T08:07:04.235-03:00 ERROR 73472 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.31] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
+2023-07-24T08:07:04.702-03:00  INFO 73472 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-07-24T08:07:04.741-03:00  INFO 73472 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-24T08:07:04.741-03:00  INFO 73472 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-07-24T08:07:05.033-03:00  INFO 73472 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-24T08:07:05.034-03:00  INFO 73472 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3895 ms
+2023-07-24T08:07:05.584-03:00  INFO 73472 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-24T08:07:05.726-03:00  INFO 73472 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-07-24T08:07:06.234-03:00  WARN 73472 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-07-24T08:07:06.373-03:00  INFO 73472 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-24T08:07:07.062-03:00  INFO 73472 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3f9e8af5
+2023-07-24T08:07:07.065-03:00  INFO 73472 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-24T08:07:07.137-03:00  INFO 73472 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-07-24T08:07:08.254-03:00  INFO 73472 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-24T08:07:08.264-03:00  INFO 73472 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-24T08:07:08.578-03:00  WARN 73472 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-24T08:07:08.646-03:00  INFO 73472 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'mssupportequipments' URL not provided. Will try picking an instance via load-balancing.
+2023-07-24T08:07:11.338-03:00  INFO 73472 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2023-07-24T08:07:11.394-03:00  WARN 73472 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-07-24T08:07:11.424-03:00  INFO 73472 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2023-07-24T08:07:11.568-03:00  INFO 73472 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 37485 (http) with context path ''
+2023-07-24T08:07:11.570-03:00  INFO 73472 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 37485
+2023-07-24T08:07:11.577-03:00  INFO 73472 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2023-07-24T08:07:11.754-03:00  INFO 73472 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2023-07-24T08:07:11.759-03:00  INFO 73472 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-24T08:07:11.820-03:00  INFO 73472 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2023-07-24T08:07:11.821-03:00  INFO 73472 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2023-07-24T08:07:11.821-03:00  INFO 73472 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2023-07-24T08:07:11.821-03:00  INFO 73472 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2023-07-24T08:07:11.821-03:00  INFO 73472 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2023-07-24T08:07:11.821-03:00  INFO 73472 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2023-07-24T08:07:11.821-03:00  INFO 73472 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2023-07-24T08:07:12.242-03:00  INFO 73472 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2023-07-24T08:07:12.248-03:00  INFO 73472 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2023-07-24T08:07:12.253-03:00  INFO 73472 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-07-24T08:07:12.261-03:00  INFO 73472 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1690196832260 with initial instances count: 2
+2023-07-24T08:07:12.266-03:00  INFO 73472 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MSROOMRESERVE with eureka with status UP
+2023-07-24T08:07:12.267-03:00  INFO 73472 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1690196832267, current=UP, previous=STARTING]
+2023-07-24T08:07:12.269-03:00  INFO 73472 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSROOMRESERVE/192.168.43.202:msroomreserve:0ec9bae97aa10bc5f1d4babc376e4870: registering service...
+2023-07-24T08:07:12.329-03:00  INFO 73472 --- [main] l.u.e.br.demo.MsRoomReserveApplication   : Started MsRoomReserveApplication in 14.841 seconds (process running for 15.725)
+2023-07-24T08:07:12.457-03:00  INFO 73472 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSROOMRESERVE/192.168.43.202:msroomreserve:0ec9bae97aa10bc5f1d4babc376e4870 - registration status: 204
+2023-07-24T08:12:11.824-03:00  INFO 73472 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-24T08:17:11.825-03:00  INFO 73472 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-24T08:22:11.826-03:00  INFO 73472 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-24T08:27:11.827-03:00  INFO 73472 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-24T08:32:11.828-03:00  INFO 73472 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-24T08:37:11.828-03:00  INFO 73472 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-24T08:42:11.829-03:00  INFO 73472 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-24T08:47:11.830-03:00  INFO 73472 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-24T08:52:11.831-03:00  INFO 73472 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-24T08:57:11.832-03:00  INFO 73472 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-24T09:02:11.833-03:00  INFO 73472 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-24T09:07:11.833-03:00  INFO 73472 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-24T09:10:48.740-03:00  INFO 73472 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-24T09:10:48.740-03:00  INFO 73472 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-24T09:10:48.743-03:00  INFO 73472 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-07-24T09:12:11.834-03:00  INFO 73472 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-24T09:14:42.493-03:00 ERROR 73472 --- [http-nio-auto-1-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: feign.FeignException$InternalServerError: [500] during [GET] to [http://mssupportequipments/equipment/equipment-campus/allocated?idReserve=ac4ee48d-a6a6-4692-9899-810f62ad44b9] [SupportEquipmentsClient#getAllocatedEquipment(UUID)]: [{"timestamp":"2023-07-24T12:14:42.418+00:00","status":500,"error":"Internal Server Error","path":"/equipment/equipment-campus/allocated"}]] with root cause
+
+feign.FeignException$InternalServerError: [500] during [GET] to [http://mssupportequipments/equipment/equipment-campus/allocated?idReserve=ac4ee48d-a6a6-4692-9899-810f62ad44b9] [SupportEquipmentsClient#getAllocatedEquipment(UUID)]: [{"timestamp":"2023-07-24T12:14:42.418+00:00","status":500,"error":"Internal Server Error","path":"/equipment/equipment-campus/allocated"}]
+	at feign.FeignException.serverErrorStatus(FeignException.java:259) ~[feign-core-12.3.jar:na]
+	at feign.FeignException.errorStatus(FeignException.java:206) ~[feign-core-12.3.jar:na]
+	at feign.FeignException.errorStatus(FeignException.java:194) ~[feign-core-12.3.jar:na]
+	at feign.FeignException.errorStatus(FeignException.java:171) ~[feign-core-12.3.jar:na]
+	at feign.codec.ErrorDecoder$Default.decode(ErrorDecoder.java:92) ~[feign-core-12.3.jar:na]
+	at feign.ResponseHandler.decodeError(ResponseHandler.java:136) ~[feign-core-12.3.jar:na]
+	at feign.ResponseHandler.handleResponse(ResponseHandler.java:70) ~[feign-core-12.3.jar:na]
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:114) ~[feign-core-12.3.jar:na]
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:70) ~[feign-core-12.3.jar:na]
+	at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:96) ~[feign-core-12.3.jar:na]
+	at jdk.proxy2/jdk.proxy2.$Proxy158.getAllocatedEquipment(Unknown Source) ~[na:na]
+	at lit.unichristus.edu.br.demo.services.RoomReserveService.getSituationReserve(RoomReserveService.java:111) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:699) ~[spring-aop-6.0.4.jar:6.0.4]
+	at lit.unichristus.edu.br.demo.services.RoomReserveService$$SpringCGLIB$$0.getSituationReserve(<generated>) ~[classes/:na]
+	at lit.unichristus.edu.br.demo.controllers.RoomReserveController.getSituationReserve(RoomReserveController.java:31) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:527) ~[jakarta.servlet-api-6.0.0.jar:6.0.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614) ~[jakarta.servlet-api-6.0.0.jar:6.0.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2023-07-24T09:17:11.835-03:00  INFO 73472 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-24T09:19:07.526-03:00 ERROR 73472 --- [http-nio-auto-1-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: feign.FeignException$InternalServerError: [500] during [GET] to [http://mssupportequipments/equipment/equipment-campus/allocated?idReserve=ac4ee48d-a6a6-4692-9899-810f62ad44b9] [SupportEquipmentsClient#getAllocatedEquipment(UUID)]: [{"timestamp":"2023-07-24T12:19:07.522+00:00","status":500,"error":"Internal Server Error","path":"/equipment/equipment-campus/allocated"}]] with root cause
+
+feign.FeignException$InternalServerError: [500] during [GET] to [http://mssupportequipments/equipment/equipment-campus/allocated?idReserve=ac4ee48d-a6a6-4692-9899-810f62ad44b9] [SupportEquipmentsClient#getAllocatedEquipment(UUID)]: [{"timestamp":"2023-07-24T12:19:07.522+00:00","status":500,"error":"Internal Server Error","path":"/equipment/equipment-campus/allocated"}]
+	at feign.FeignException.serverErrorStatus(FeignException.java:259) ~[feign-core-12.3.jar:na]
+	at feign.FeignException.errorStatus(FeignException.java:206) ~[feign-core-12.3.jar:na]
+	at feign.FeignException.errorStatus(FeignException.java:194) ~[feign-core-12.3.jar:na]
+	at feign.FeignException.errorStatus(FeignException.java:171) ~[feign-core-12.3.jar:na]
+	at feign.codec.ErrorDecoder$Default.decode(ErrorDecoder.java:92) ~[feign-core-12.3.jar:na]
+	at feign.ResponseHandler.decodeError(ResponseHandler.java:136) ~[feign-core-12.3.jar:na]
+	at feign.ResponseHandler.handleResponse(ResponseHandler.java:70) ~[feign-core-12.3.jar:na]
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:114) ~[feign-core-12.3.jar:na]
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:70) ~[feign-core-12.3.jar:na]
+	at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:96) ~[feign-core-12.3.jar:na]
+	at jdk.proxy2/jdk.proxy2.$Proxy158.getAllocatedEquipment(Unknown Source) ~[na:na]
+	at lit.unichristus.edu.br.demo.services.RoomReserveService.getSituationReserve(RoomReserveService.java:111) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:699) ~[spring-aop-6.0.4.jar:6.0.4]
+	at lit.unichristus.edu.br.demo.services.RoomReserveService$$SpringCGLIB$$0.getSituationReserve(<generated>) ~[classes/:na]
+	at lit.unichristus.edu.br.demo.controllers.RoomReserveController.getSituationReserve(RoomReserveController.java:31) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:527) ~[jakarta.servlet-api-6.0.0.jar:6.0.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614) ~[jakarta.servlet-api-6.0.0.jar:6.0.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2023-07-24T09:22:11.836-03:00  INFO 73472 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-24T09:25:36.486-03:00  INFO 73472 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application MSROOMRESERVE with eureka with status DOWN
+2023-07-24T09:25:36.489-03:00  INFO 73472 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1690201536489, current=DOWN, previous=UP]
+2023-07-24T09:25:36.498-03:00  INFO 73472 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSROOMRESERVE/192.168.43.202:msroomreserve:0ec9bae97aa10bc5f1d4babc376e4870: registering service...
+2023-07-24T09:25:36.606-03:00  INFO 73472 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-24T09:25:36.616-03:00  INFO 73472 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-24T09:25:36.674-03:00  INFO 73472 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-24T09:25:36.675-03:00  INFO 73472 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2023-07-24T09:25:36.735-03:00  INFO 73472 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSROOMRESERVE/192.168.43.202:msroomreserve:0ec9bae97aa10bc5f1d4babc376e4870 - registration status: 204
+2023-07-24T09:25:36.738-03:00  INFO 73472 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2023-07-24T09:25:36.915-03:00  INFO 73472 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSROOMRESERVE/192.168.43.202:msroomreserve:0ec9bae97aa10bc5f1d4babc376e4870 - deregister  status: 200
+2023-07-24T09:25:36.923-03:00  INFO 73472 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2023-07-24T09:25:52.469-03:00  INFO 88237 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2023-07-24T09:25:52.917-03:00  INFO 88237 --- [main] c.c.c.ConfigServicePropertySourceLocator : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/msroomreserve/default": Conexão recusada. Will be trying the next url if available
+2023-07-24T09:25:52.922-03:00  WARN 88237 --- [main] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/msroomreserve/default": Conexão recusada
+2023-07-24T09:25:52.934-03:00  INFO 88237 --- [main] l.u.e.br.demo.MsRoomReserveApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-07-24T09:25:56.939-03:00  INFO 88237 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-24T09:25:57.374-03:00  INFO 88237 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 413 ms. Found 1 JPA repository interfaces.
+2023-07-24T09:25:58.481-03:00  INFO 88237 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=5baa2d3c-cd94-30ec-99d8-d2a75fee4316
+2023-07-24T09:25:58.777-03:00  INFO 88237 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'lit.unichristus.edu.br.demo.clients.SupportEquipmentsClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-24T09:25:59.015-03:00 ERROR 88237 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.31] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
+2023-07-24T09:25:59.523-03:00  INFO 88237 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-07-24T09:25:59.536-03:00  INFO 88237 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-24T09:25:59.537-03:00  INFO 88237 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-07-24T09:25:59.823-03:00  INFO 88237 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-24T09:25:59.824-03:00  INFO 88237 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6811 ms
+2023-07-24T09:26:00.878-03:00  INFO 88237 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-24T09:26:01.012-03:00  INFO 88237 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-07-24T09:26:01.384-03:00  WARN 88237 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-07-24T09:26:01.586-03:00  INFO 88237 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-24T09:26:02.171-03:00  INFO 88237 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@694b1ddb
+2023-07-24T09:26:02.177-03:00  INFO 88237 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-24T09:26:02.229-03:00  INFO 88237 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-07-24T09:26:03.273-03:00  INFO 88237 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-24T09:26:03.282-03:00  INFO 88237 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-24T09:26:03.591-03:00  WARN 88237 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-24T09:26:03.669-03:00  INFO 88237 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'mssupportequipments' URL not provided. Will try picking an instance via load-balancing.
+2023-07-24T09:26:06.570-03:00  INFO 88237 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2023-07-24T09:26:06.622-03:00  WARN 88237 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-07-24T09:26:06.650-03:00  INFO 88237 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2023-07-24T09:26:06.828-03:00  INFO 88237 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 39419 (http) with context path ''
+2023-07-24T09:26:06.829-03:00  INFO 88237 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 39419
+2023-07-24T09:26:06.836-03:00  INFO 88237 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2023-07-24T09:26:07.132-03:00  INFO 88237 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2023-07-24T09:26:07.147-03:00  INFO 88237 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-24T09:26:07.236-03:00  INFO 88237 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2023-07-24T09:26:07.240-03:00  INFO 88237 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2023-07-24T09:26:07.241-03:00  INFO 88237 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2023-07-24T09:26:07.247-03:00  INFO 88237 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2023-07-24T09:26:07.247-03:00  INFO 88237 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2023-07-24T09:26:07.247-03:00  INFO 88237 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2023-07-24T09:26:07.247-03:00  INFO 88237 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2023-07-24T09:26:07.762-03:00  INFO 88237 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2023-07-24T09:26:07.768-03:00  INFO 88237 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2023-07-24T09:26:07.771-03:00  INFO 88237 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-07-24T09:26:07.780-03:00  INFO 88237 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1690201567779 with initial instances count: 2
+2023-07-24T09:26:07.785-03:00  INFO 88237 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MSROOMRESERVE with eureka with status UP
+2023-07-24T09:26:07.786-03:00  INFO 88237 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1690201567786, current=UP, previous=STARTING]
+2023-07-24T09:26:07.788-03:00  INFO 88237 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSROOMRESERVE/192.168.43.202:msroomreserve:3fb71b99776b5b245c93bef393863657: registering service...
+2023-07-24T09:26:07.845-03:00  INFO 88237 --- [main] l.u.e.br.demo.MsRoomReserveApplication   : Started MsRoomReserveApplication in 19.614 seconds (process running for 21.591)
+2023-07-24T09:26:07.951-03:00  INFO 88237 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSROOMRESERVE/192.168.43.202:msroomreserve:3fb71b99776b5b245c93bef393863657 - registration status: 204
+2023-07-24T09:31:07.250-03:00  INFO 88237 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-24T09:36:07.250-03:00  INFO 88237 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-24T09:36:47.154-03:00  INFO 88237 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application MSROOMRESERVE with eureka with status DOWN
+2023-07-24T09:36:47.154-03:00  INFO 88237 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1690202207154, current=DOWN, previous=UP]
+2023-07-24T09:36:47.154-03:00  INFO 88237 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSROOMRESERVE/192.168.43.202:msroomreserve:3fb71b99776b5b245c93bef393863657: registering service...
+2023-07-24T09:36:47.187-03:00  INFO 88237 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-24T09:36:47.191-03:00  INFO 88237 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-24T09:36:47.218-03:00  INFO 88237 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-24T09:36:47.219-03:00  INFO 88237 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2023-07-24T09:36:47.280-03:00  INFO 88237 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSROOMRESERVE/192.168.43.202:msroomreserve:3fb71b99776b5b245c93bef393863657 - registration status: 204
+2023-07-24T09:36:47.282-03:00  INFO 88237 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2023-07-24T09:36:47.384-03:00  INFO 88237 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSROOMRESERVE/192.168.43.202:msroomreserve:3fb71b99776b5b245c93bef393863657 - deregister  status: 200
+2023-07-24T09:36:47.394-03:00  INFO 88237 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2023-07-24T09:36:54.980-03:00  INFO 92439 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2023-07-24T09:36:55.167-03:00  INFO 92439 --- [main] c.c.c.ConfigServicePropertySourceLocator : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/msroomreserve/default": Conexão recusada. Will be trying the next url if available
+2023-07-24T09:36:55.167-03:00  WARN 92439 --- [main] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/msroomreserve/default": Conexão recusada
+2023-07-24T09:36:55.174-03:00  INFO 92439 --- [main] l.u.e.br.demo.MsRoomReserveApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-07-24T09:36:57.163-03:00  INFO 92439 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-24T09:36:57.393-03:00  INFO 92439 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 213 ms. Found 1 JPA repository interfaces.
+2023-07-24T09:36:58.055-03:00  INFO 92439 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=5baa2d3c-cd94-30ec-99d8-d2a75fee4316
+2023-07-24T09:36:58.201-03:00  INFO 92439 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'lit.unichristus.edu.br.demo.clients.SupportEquipmentsClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-24T09:36:58.445-03:00 ERROR 92439 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.31] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
+2023-07-24T09:36:58.885-03:00  INFO 92439 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-07-24T09:36:58.917-03:00  INFO 92439 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-24T09:36:58.918-03:00  INFO 92439 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-07-24T09:36:59.175-03:00  INFO 92439 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-24T09:36:59.176-03:00  INFO 92439 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3971 ms
+2023-07-24T09:36:59.817-03:00  INFO 92439 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-24T09:36:59.881-03:00  INFO 92439 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-07-24T09:37:00.065-03:00  WARN 92439 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-07-24T09:37:00.209-03:00  INFO 92439 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-24T09:37:00.587-03:00  INFO 92439 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7cbfbcd1
+2023-07-24T09:37:00.590-03:00  INFO 92439 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-24T09:37:00.635-03:00  INFO 92439 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-07-24T09:37:01.615-03:00  INFO 92439 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-24T09:37:01.625-03:00  INFO 92439 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-24T09:37:01.848-03:00  WARN 92439 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-24T09:37:01.925-03:00  INFO 92439 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'mssupportequipments' URL not provided. Will try picking an instance via load-balancing.
+2023-07-24T09:37:04.523-03:00  INFO 92439 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2023-07-24T09:37:04.573-03:00  WARN 92439 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-07-24T09:37:04.595-03:00  INFO 92439 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2023-07-24T09:37:04.707-03:00  INFO 92439 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 46293 (http) with context path ''
+2023-07-24T09:37:04.708-03:00  INFO 92439 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 46293
+2023-07-24T09:37:04.713-03:00  INFO 92439 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2023-07-24T09:37:04.830-03:00  INFO 92439 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2023-07-24T09:37:04.835-03:00  INFO 92439 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-24T09:37:04.863-03:00  INFO 92439 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2023-07-24T09:37:04.863-03:00  INFO 92439 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2023-07-24T09:37:04.863-03:00  INFO 92439 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2023-07-24T09:37:04.865-03:00  INFO 92439 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2023-07-24T09:37:04.865-03:00  INFO 92439 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2023-07-24T09:37:04.865-03:00  INFO 92439 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2023-07-24T09:37:04.866-03:00  INFO 92439 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2023-07-24T09:37:05.219-03:00  INFO 92439 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2023-07-24T09:37:05.223-03:00  INFO 92439 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2023-07-24T09:37:05.227-03:00  INFO 92439 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-07-24T09:37:05.234-03:00  INFO 92439 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1690202225233 with initial instances count: 3
+2023-07-24T09:37:05.238-03:00  INFO 92439 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MSROOMRESERVE with eureka with status UP
+2023-07-24T09:37:05.239-03:00  INFO 92439 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1690202225239, current=UP, previous=STARTING]
+2023-07-24T09:37:05.242-03:00  INFO 92439 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSROOMRESERVE/192.168.43.202:msroomreserve:ecff467df3266ea46c75658d0f8be51e: registering service...
+2023-07-24T09:37:05.301-03:00  INFO 92439 --- [main] l.u.e.br.demo.MsRoomReserveApplication   : Started MsRoomReserveApplication in 13.363 seconds (process running for 14.053)
+2023-07-24T09:37:05.470-03:00  INFO 92439 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSROOMRESERVE/192.168.43.202:msroomreserve:ecff467df3266ea46c75658d0f8be51e - registration status: 204
+2023-07-24T09:37:17.303-03:00  INFO 92439 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-24T09:37:17.304-03:00  INFO 92439 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-24T09:37:17.306-03:00  INFO 92439 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-07-24T09:42:04.868-03:00  INFO 92439 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-24T09:47:04.869-03:00  INFO 92439 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-24T09:52:04.870-03:00  INFO 92439 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-24T09:54:36.864-03:00  INFO 92439 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application MSROOMRESERVE with eureka with status DOWN
+2023-07-24T09:54:36.865-03:00  INFO 92439 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1690203276865, current=DOWN, previous=UP]
+2023-07-24T09:54:36.865-03:00  INFO 92439 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSROOMRESERVE/192.168.43.202:msroomreserve:ecff467df3266ea46c75658d0f8be51e: registering service...
+2023-07-24T09:54:36.929-03:00  INFO 92439 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-24T09:54:36.932-03:00  INFO 92439 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-24T09:54:36.952-03:00  INFO 92439 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-24T09:54:36.953-03:00  INFO 92439 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2023-07-24T09:54:37.045-03:00  INFO 92439 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSROOMRESERVE/192.168.43.202:msroomreserve:ecff467df3266ea46c75658d0f8be51e - registration status: 204
+2023-07-24T09:54:37.051-03:00  INFO 92439 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2023-07-24T09:54:37.202-03:00  INFO 92439 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSROOMRESERVE/192.168.43.202:msroomreserve:ecff467df3266ea46c75658d0f8be51e - deregister  status: 200
+2023-07-24T09:54:37.215-03:00  INFO 92439 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2023-07-24T09:54:46.621-03:00  INFO 100843 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2023-07-24T09:54:46.886-03:00  INFO 100843 --- [main] c.c.c.ConfigServicePropertySourceLocator : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/msroomreserve/default": Conexão recusada. Will be trying the next url if available
+2023-07-24T09:54:46.887-03:00  WARN 100843 --- [main] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/msroomreserve/default": Conexão recusada
+2023-07-24T09:54:46.898-03:00  INFO 100843 --- [main] l.u.e.br.demo.MsRoomReserveApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-07-24T09:54:49.393-03:00  INFO 100843 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-24T09:54:49.738-03:00  INFO 100843 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 318 ms. Found 1 JPA repository interfaces.
+2023-07-24T09:54:50.562-03:00  INFO 100843 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=5baa2d3c-cd94-30ec-99d8-d2a75fee4316
+2023-07-24T09:54:50.768-03:00  INFO 100843 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'lit.unichristus.edu.br.demo.clients.SupportEquipmentsClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-24T09:54:51.068-03:00 ERROR 100843 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.31] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
+2023-07-24T09:54:52.013-03:00  INFO 100843 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-07-24T09:54:52.039-03:00  INFO 100843 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-24T09:54:52.041-03:00  INFO 100843 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-07-24T09:54:52.356-03:00  INFO 100843 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-24T09:54:52.357-03:00  INFO 100843 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5421 ms
+2023-07-24T09:54:53.208-03:00  INFO 100843 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-24T09:54:53.286-03:00  INFO 100843 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-07-24T09:54:53.519-03:00  WARN 100843 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-07-24T09:54:53.832-03:00  INFO 100843 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-24T09:54:54.701-03:00  INFO 100843 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@694b1ddb
+2023-07-24T09:54:54.705-03:00  INFO 100843 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-24T09:54:54.784-03:00  INFO 100843 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-07-24T09:54:56.759-03:00  INFO 100843 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-24T09:54:56.792-03:00  INFO 100843 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-24T09:54:57.483-03:00  WARN 100843 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-24T09:54:57.691-03:00  INFO 100843 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'mssupportequipments' URL not provided. Will try picking an instance via load-balancing.
+2023-07-24T09:55:00.794-03:00  INFO 100843 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2023-07-24T09:55:00.836-03:00  WARN 100843 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-07-24T09:55:00.856-03:00  INFO 100843 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2023-07-24T09:55:00.980-03:00  INFO 100843 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 35649 (http) with context path ''
+2023-07-24T09:55:00.982-03:00  INFO 100843 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 35649
+2023-07-24T09:55:00.987-03:00  INFO 100843 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2023-07-24T09:55:01.102-03:00  INFO 100843 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2023-07-24T09:55:01.106-03:00  INFO 100843 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-24T09:55:01.132-03:00  INFO 100843 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2023-07-24T09:55:01.132-03:00  INFO 100843 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2023-07-24T09:55:01.133-03:00  INFO 100843 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2023-07-24T09:55:01.133-03:00  INFO 100843 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2023-07-24T09:55:01.133-03:00  INFO 100843 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2023-07-24T09:55:01.133-03:00  INFO 100843 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2023-07-24T09:55:01.134-03:00  INFO 100843 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2023-07-24T09:55:01.559-03:00  INFO 100843 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2023-07-24T09:55:01.563-03:00  INFO 100843 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2023-07-24T09:55:01.569-03:00  INFO 100843 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-07-24T09:55:01.579-03:00  INFO 100843 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1690203301576 with initial instances count: 3
+2023-07-24T09:55:01.585-03:00  INFO 100843 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MSROOMRESERVE with eureka with status UP
+2023-07-24T09:55:01.587-03:00  INFO 100843 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1690203301587, current=UP, previous=STARTING]
+2023-07-24T09:55:01.590-03:00  INFO 100843 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSROOMRESERVE/192.168.43.202:msroomreserve:79366d5f5e61de1333eee7d96379b80c: registering service...
+2023-07-24T09:55:01.657-03:00  INFO 100843 --- [main] l.u.e.br.demo.MsRoomReserveApplication   : Started MsRoomReserveApplication in 18.192 seconds (process running for 19.785)
+2023-07-24T09:55:01.757-03:00  INFO 100843 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSROOMRESERVE/192.168.43.202:msroomreserve:79366d5f5e61de1333eee7d96379b80c - registration status: 204
+2023-07-24T09:56:06.209-03:00  INFO 100843 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-24T09:56:06.210-03:00  INFO 100843 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-24T09:56:06.212-03:00  INFO 100843 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-07-24T09:56:36.416-03:00 ERROR 100843 --- [http-nio-auto-1-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: feign.FeignException$NotFound: [404] during [GET] to [http://mssupportequipments/equipment/equipment-campus/allocated?idReserve=0d1bcb2a-3751-4180-b8db-59400b5d2096] [SupportEquipmentsClient#getAllocatedEquipment(UUID)]: [Error: no one equipment allocated]] with root cause
+
+feign.FeignException$NotFound: [404] during [GET] to [http://mssupportequipments/equipment/equipment-campus/allocated?idReserve=0d1bcb2a-3751-4180-b8db-59400b5d2096] [SupportEquipmentsClient#getAllocatedEquipment(UUID)]: [Error: no one equipment allocated]
+	at feign.FeignException.clientErrorStatus(FeignException.java:228) ~[feign-core-12.3.jar:na]
+	at feign.FeignException.errorStatus(FeignException.java:203) ~[feign-core-12.3.jar:na]
+	at feign.FeignException.errorStatus(FeignException.java:194) ~[feign-core-12.3.jar:na]
+	at feign.FeignException.errorStatus(FeignException.java:171) ~[feign-core-12.3.jar:na]
+	at feign.codec.ErrorDecoder$Default.decode(ErrorDecoder.java:92) ~[feign-core-12.3.jar:na]
+	at feign.ResponseHandler.decodeError(ResponseHandler.java:136) ~[feign-core-12.3.jar:na]
+	at feign.ResponseHandler.handleResponse(ResponseHandler.java:70) ~[feign-core-12.3.jar:na]
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:114) ~[feign-core-12.3.jar:na]
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:70) ~[feign-core-12.3.jar:na]
+	at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:96) ~[feign-core-12.3.jar:na]
+	at jdk.proxy2/jdk.proxy2.$Proxy158.getAllocatedEquipment(Unknown Source) ~[na:na]
+	at lit.unichristus.edu.br.demo.services.RoomReserveService.getSituationReserve(RoomReserveService.java:111) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:699) ~[spring-aop-6.0.4.jar:6.0.4]
+	at lit.unichristus.edu.br.demo.services.RoomReserveService$$SpringCGLIB$$0.getSituationReserve(<generated>) ~[classes/:na]
+	at lit.unichristus.edu.br.demo.controllers.RoomReserveController.getSituationReserve(RoomReserveController.java:31) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:527) ~[jakarta.servlet-api-6.0.0.jar:6.0.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614) ~[jakarta.servlet-api-6.0.0.jar:6.0.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2023-07-24T10:00:01.139-03:00  INFO 100843 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-24T10:05:01.141-03:00  INFO 100843 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-24T10:10:01.143-03:00  INFO 100843 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-24T10:15:01.144-03:00  INFO 100843 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-24T10:20:01.144-03:00  INFO 100843 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-24T10:25:01.146-03:00  INFO 100843 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-24T10:30:01.146-03:00  INFO 100843 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-24T10:32:46.375-03:00  INFO 100843 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application MSROOMRESERVE with eureka with status DOWN
+2023-07-24T10:32:46.375-03:00  INFO 100843 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1690205566375, current=DOWN, previous=UP]
+2023-07-24T10:32:46.375-03:00  INFO 100843 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSROOMRESERVE/192.168.43.202:msroomreserve:79366d5f5e61de1333eee7d96379b80c: registering service...
+2023-07-24T10:32:46.417-03:00  INFO 100843 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-24T10:32:46.421-03:00  INFO 100843 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-24T10:32:46.439-03:00  INFO 100843 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-24T10:32:46.440-03:00  INFO 100843 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2023-07-24T10:32:46.491-03:00  INFO 100843 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSROOMRESERVE/192.168.43.202:msroomreserve:79366d5f5e61de1333eee7d96379b80c - registration status: 204
+2023-07-24T10:32:46.494-03:00  INFO 100843 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2023-07-24T10:32:46.609-03:00  INFO 100843 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSROOMRESERVE/192.168.43.202:msroomreserve:79366d5f5e61de1333eee7d96379b80c - deregister  status: 200
+2023-07-24T10:32:46.626-03:00  INFO 100843 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient

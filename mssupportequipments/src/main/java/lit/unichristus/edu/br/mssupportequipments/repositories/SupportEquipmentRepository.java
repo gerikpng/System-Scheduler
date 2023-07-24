@@ -17,8 +17,17 @@ public interface SupportEquipmentRepository extends JpaRepository<SupportEquipme
     List<SupportEquipmentModel> findByCampusAndIsDeletedFalse(UUID id);
 
     //from mReserve
-    SupportEquipmentModel findFirstByCampusAndSituationAndBookedUntilBefore(UUID id, SituationEnum situation, Date now);
-    List<SupportEquipmentModel> findByCampusAndSituationAndBookedUntilBefore(UUID id, SituationEnum situation, Date now);
+    SupportEquipmentModel findFirstByCampusAndSituation(UUID id, SituationEnum situation);
+//    List<SupportEquipmentModel> findByCampusAndSituationAndBookedUntilBefore(UUID id, SituationEnum situation, Date now);
+
+    Object findByCampusAndSituation(UUID id, SituationEnum released);
+
+    List<SupportEquipmentModel> findAllByReserveRoomId(UUID idReserve);
+
+    // SELECT PARA LISTAR OS EQUIPAMENTOS (de forma não duplicada) EM UM MENU SELECT
+//    SELECT description	FROM public.support_equipment WHERE situation = 'Release' group by support_equipment.description ;
+//    List<SupportEquipmentModel>
+
 
 //    ResponseEntity<List<SupportEquipmentModel>> findByCampus(String campus);
 }

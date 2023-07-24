@@ -31,11 +31,23 @@ public class SupportEquipmentController {
     }
 
     @GetMapping("equipment-campus/{id}")
-    public ResponseEntity<List<SupportEquipmentModel>> getByCampus(@PathVariable("id") UUID id){
+    public ResponseEntity<List<SupportEquipmentModel>> getAllEquipmentsByCampus(@PathVariable("id") UUID id){
         Object equipmentCampus = equipmentService.findByCampus(id);
         return ResponseEntity.ok((List<SupportEquipmentModel>) equipmentCampus);
     }
 
+    @GetMapping(value="equipment-campus/released")
+    public ResponseEntity<Object> getReleasedEquipmentsByCampus(@RequestParam("campus") UUID campusId){
+        Object equipmentCampus = equipmentService.findByCampusAndSituation(campusId,SituationEnum.Released);
+        return ResponseEntity.ok((List<SupportEquipmentModel>) equipmentCampus);
+    }
+
+    @GetMapping(value="equipment-campus/allocated")
+    @ResponseBody
+    public ResponseEntity<List<SupportEquipmentModel>> getAllocatedEquipment(@RequestParam("idReserve") UUID idReserve){
+        List<SupportEquipmentModel> modelEquipments = equipmentService.getAllocatedEquipments(idReserve);
+            return ResponseEntity.status(HttpStatus.OK).body(modelEquipments);
+    }
 
     @PostMapping
     public ResponseEntity<Object> saveSupportEquipment(@RequestBody @Valid SupportEquipmentsDto dto){
@@ -83,12 +95,31 @@ public class SupportEquipmentController {
     }
 
 
-    //---FROM msRelease
+    //---FROM msReserve
+    //funcao para reservar equipamento, devera definir BookedUntil de acordo com a hora final da reserva da sala, devera conter campo para vincular a reserva de sala
+    @PutMapping("/reserve")
+    public ResponseEntity<Object> reserveEquipment(@RequestParam(value="id") UUID id,@RequestParam(value="reserveRoom") UUID reserveRoomId){
+        try{
+            Optional<SupportEquipmentModel> optional = equipmentService.findById(id);
+            if(!optional.isPresent()){
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("EQUIPMENT NOT FOUND");
+            }
+            SupportEquipmentModel model = optional.get();
+            model.setId(optional.get().getId());
+            model.setSituation(SituationEnum.InUse);
+            model.setReserveRoomId(reserveRoomId);
+            return ResponseEntity.status(HttpStatus.OK).body(equipmentService.save(model));
+        }catch (Exception e){
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e);
+        }
+    }
+
+
     @PutMapping("/release")
     public ResponseEntity<Object> releaseManuallyEquipment(){
         try{
             UUID idCampus = UUID.fromString("25323fa5-3781-40b6-be77-a021ec4e82b1");
-            List<SupportEquipmentModel> equipments = equipmentService.getAllReleasableEquipament(idCampus);
+            List<SupportEquipmentModel> equipments = (List<SupportEquipmentModel>) equipmentService.getAllReleasableEquipament(idCampus);
             if(equipments.equals(null)) {
                 System.out.println("NADA ENCONTRADO =---------------------------------------------------");
                 return ResponseEntity.status(HttpStatus.NOT_FOUND).body("NO ONE EQUIPMENT CAN BE RELEASED");
@@ -107,29 +138,31 @@ public class SupportEquipmentController {
 
 
 
-//    @PutMapping()
-//    @Scheduled(fixedDelay = 12, timeUnit = TimeUnit.HOURS)
-//    public ResponseEntity<Object> releaseAllEquipment(){
-//        try{
-//            UUID idCampus = UUID.fromString("25323fa5-3781-40b6-be77-a021ec4e82b1");
-//            SupportEquipmentModel equipments = equipmentService.getReleasableEquipament(idCampus);
-//
-//
-//
-//            if(equipments.equals(null)) {
-//                System.out.println("NADA ENCONTRADO =---------------------------------------------------");
-//                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("NO ONE EQUIPMENT CAN BE RELEASED");
-//            }
-//            System.out.println("TUDO ENCONTRADO =---------------------------------------------------"+new Date());
-//
-//
-//            equipments.setSituation(SituationEnum.Released);
-//            return ResponseEntity.status(HttpStatus.OK).body(equipmentService.releaseEquipment(equipments));
-//
-//        }catch (Exception e){
-//            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e);
-//        }
-//    }
+
+//funcao que automaticamente busca uma lista de equipamentos com a situacao InUse que pertencem ao campus do usuário logado e altera a situacao para Released para todos aqueles que tenham ultrapassado o tempo de ocupacao definido.
+
+    @PutMapping()
+    @Scheduled(fixedDelay = 12, timeUnit = TimeUnit.HOURS)
+    public ResponseEntity<Object> releaseAllEquipment(){
+        try{
+            UUID idCampus = UUID.fromString("25323fa5-3781-40b6-be77-a021ec4e82b1");
+            List<SupportEquipmentModel> equipments = (List<SupportEquipmentModel>) equipmentService.getAllReleasableEquipament(idCampus);
+            if(equipments.equals(null)) {
+                System.out.println("NADA ENCONTRADO =---------------------------------------------------");
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("NO ONE EQUIPMENT CAN BE RELEASED");
+            }
+            System.out.println("TUDO ENCONTRADO =---------------------------------------------------"+new Date());
+
+
+            for(SupportEquipmentModel equipamentos: equipments){
+                equipamentos.setSituation(SituationEnum.Released);
+            }
+            return ResponseEntity.status(HttpStatus.OK).body(equipmentService.releaseAllEquipment(equipments));
+
+        }catch (Exception e){
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e);
+        }
+    }
 
 
 

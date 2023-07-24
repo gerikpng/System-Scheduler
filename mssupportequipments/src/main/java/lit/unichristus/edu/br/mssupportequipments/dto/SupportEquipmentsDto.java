@@ -10,6 +10,9 @@ import java.util.Date;
 import java.util.UUID;
 
 public class SupportEquipmentsDto {
+
+    private UUID id;
+
     @NotBlank(message="Name may not be blank")
     @Size(max = 30)
     private String description;
@@ -24,14 +27,19 @@ public class SupportEquipmentsDto {
     @NotNull
     private Integer amount;
     private Date lastChange;
-
     private UUID campus;
-    private String room;
-
-    private Date bookedUntil;
+    private UUID reserveRoomId;
 
     public SupportEquipmentModel toModel(){
-        return new SupportEquipmentModel(isDeleted,description,brand,productModel,serialNumber,patrimony,situation,amount,lastChange,campus,room,bookedUntil);
+        return new SupportEquipmentModel(id,isDeleted,description,brand,productModel,serialNumber,patrimony,situation,amount,lastChange,campus,reserveRoomId);
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
     }
 
     public boolean isDeleted() {
@@ -114,19 +122,11 @@ public class SupportEquipmentsDto {
         this.campus = campus;
     }
 
-    public String getRoom() {
-        return room;
+    public UUID getReserveRoomId() {
+        return reserveRoomId;
     }
 
-    public void setRoom(String room) {
-        this.room = room;
-    }
-
-    public Date getBookedUntil() {
-        return bookedUntil;
-    }
-
-    public void setBookedUntil(Date bookedUntil) {
-        this.bookedUntil = bookedUntil;
+    public void setReserveRoomId(UUID reserveRoomId) {
+        this.reserveRoomId = reserveRoomId;
     }
 }

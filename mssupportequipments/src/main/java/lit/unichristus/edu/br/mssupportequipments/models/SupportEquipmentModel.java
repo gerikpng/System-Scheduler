@@ -1,6 +1,5 @@
 package lit.unichristus.edu.br.mssupportequipments.models;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import jakarta.transaction.Transactional;
 import lit.unichristus.edu.br.mssupportequipments.enums.SituationEnum;
@@ -50,13 +49,11 @@ public class SupportEquipmentModel {
 
     private Date lastChange;
 
-    private Date bookedUntil;
-    @Column(nullable = false, length = 80)
     private UUID campus;
 
-    private String room;
+    private UUID reserveRoomId;
 
-    public SupportEquipmentModel(boolean isDeleted, String description, String brand, String productModel, String serialNumber, String patrimony, SituationEnum situation, Integer amount, Date lastChange, UUID campus, String room, Date bookedUntil) {
+    public SupportEquipmentModel(UUID id, boolean isDeleted, String description, String brand, String productModel, String serialNumber, String patrimony, SituationEnum situation, Integer amount, Date lastChange,UUID campus, UUID reserveRoomId ) {
         this.isDeleted = isDeleted;
         this.description = description;
         this.brand = brand;
@@ -67,8 +64,8 @@ public class SupportEquipmentModel {
         this.amount = amount;
         this.lastChange = lastChange;
         this.campus = campus;
-        this.room = room;
-        this.bookedUntil = bookedUntil;
+        this.reserveRoomId = reserveRoomId;
+
     }
 
     public UUID getId() {
@@ -167,19 +164,11 @@ public class SupportEquipmentModel {
         this.campus = campus;
     }
 
-    public String getRoom() {
-        return room;
+    public UUID getReserveRoomId() {
+        return reserveRoomId;
     }
 
-    public void setRoom(String room) {
-        this.room = room;
-    }
-
-    public Date getBookedUntil() {
-        return bookedUntil;
-    }
-
-    public void setBookedUntil(Date bookedUntil) {
-        this.bookedUntil = bookedUntil;
+    public void setReserveRoomId(UUID reserveRoomId) {
+        this.reserveRoomId = reserveRoomId;
     }
 }
